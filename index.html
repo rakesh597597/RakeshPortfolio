@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Rakesh Mamindla — Java Full Stack Developer</title>
+<meta name="description" content="Rakesh Mamindla — Java Full Stack Developer. B.Tech CSE 2026. Spring Boot, MySQL, React." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ===== Custom cursor ===== -->
+<div class="cursor-dot"  id="cursorDot"  aria-hidden="true"></div>
+<div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+<!-- ===== Scroll progress ===== -->
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+<!-- ===== Grain overlay ===== -->
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ================= NAV ================= -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#top" class="brand" data-magnetic>
+      <span class="brand-mark">R</span>
+      <span class="brand-text">rakesh<em>.dev</em></span>
+    </a>
+
+    <nav class="nav-links" id="navLinks" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#stack">Stack</a>
+      <a href="#journey">Journey</a>
+      <a href="#contact">Contact</a>
+      <span class="nav-indicator" id="navIndicator" aria-hidden="true"></span>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="Rakesh_Mamindla_Java_Resume.pdf" class="btn btn-ghost nav-resume" download data-magnetic>
+        Resume
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+          <polyline points="7 10 12 15 17 10"/>
+          <line x1="12" y1="15" x2="12" y2="3"/>
+        </svg>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="hero-orbs" aria-hidden="true">
+    <span class="orb orb-1"></span>
+    <span class="orb orb-2"></span>
+    <span class="orb orb-3"></span>
+  </div>
+
+  <div class="container">
+
+    <div class="hero-top" data-reveal>
+      <span class="status">
+        <span class="status-dot"></span>
+        Available for hire · 2026
+      </span>
+      <span class="hero-loc">Hyderabad, IN</span>
+    </div>
+
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <h1 class="hero-name" data-reveal>
+          Rakesh<span class="hero-name-dot">.</span>
+        </h1>
+
+        <div class="hero-rotator" data-reveal>
+          <span class="hero-rotator-prefix">I build as a</span>
+          <span class="rotator" id="rotator">
+            <span class="rotator-word is-active">Java Developer</span>
+            <span class="rotator-word">Java Full Stack Developer</span>
+            <span class="rotator-word">Backend Engineer</span>
+            <span class="rotator-word">Software Engineer</span>
+          </span>
+        </div>
+
+        <p class="hero-lede" data-reveal>
+          B.Tech CSE graduate (2026) crafting production-minded backends with
+          <strong>Java &amp; Spring Boot</strong>, and clean interfaces with
+          <strong>React</strong>. Currently sharpening Core &amp; Advanced Java at
+          Codegnan IT Solutions.
+        </p>
+
+        <div class="hero-actions" data-reveal>
+          <a href="#work" class="btn btn-primary" data-magnetic data-cursor="View">
+            Selected work
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </a>
+          <a href="#contact" class="btn btn-ghost" data-magnetic data-cursor="Contact">
+            Get in touch
+          </a>
+        </div>
+
+        <div class="hero-socials" data-reveal>
+          <a href="https://github.com/rakesh597597" target="_blank" rel="noopener noreferrer" class="social" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 .5C5.37.5 0 5.87 0 12.5c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.34-5.47-5.96 0-1.32.47-2.39 1.24-3.23-.13-.3-.54-1.53.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6.01 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.65.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.23 0 4.63-2.81 5.65-5.49 5.95.43.37.82 1.1.82 2.22v3.29c0 .32.21.7.83.58A12.01 12.01 0 0 0 24 12.5C24 5.87 18.63.5 12 .5z"/>
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/mamindla-rakesh-206356303/" target="_blank" rel="noopener noreferrer" class="social" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/>
+            </svg>
+          </a>
+          <a href="mailto:mamindlarakesh124@gmail.com" class="social" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-portrait" data-reveal>
+        <div class="portrait-frame" data-tilt>
+          <img src="Portfolio.jpg" alt="Rakesh Mamindla" width="420" height="420" />
+          <div class="portrait-tag portrait-tag--tl">B.Tech CSE · '26</div>
+          <div class="portrait-tag portrait-tag--br">Java · Spring · React</div>
+          <div class="portrait-shine" aria-hidden="true"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Spring Boot</span><span>◆</span>
+        <span>Hibernate</span><span>◆</span>
+        <span>MySQL</span><span>◆</span>
+        <span>REST APIs</span><span>◆</span>
+        <span>React</span><span>◆</span>
+        <span>Core Java</span><span>◆</span>
+        <span>Spring Boot</span><span>◆</span>
+        <span>Hibernate</span><span>◆</span>
+        <span>MySQL</span><span>◆</span>
+        <span>REST APIs</span><span>◆</span>
+        <span>React</span><span>◆</span>
+        <span>Core Java</span><span>◆</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section id="about" class="section section--about">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <span class="section-num">01 — Who I am</span>
+      <h2 class="section-title">Backend-first, full-stack capable.</h2>
+    </div>
+
+    <div class="about">
+      <div class="about-copy" data-reveal>
+        <p class="lead">
+          I care about the whole pipeline — from how a table is designed to how a
+          button feels when you press it. I write Java another engineer would be
+          happy to inherit.
+        </p>
+        <p>
+          My training at <strong>Codegnan IT Solutions</strong> is hands-on and
+          project-driven: modelling schemas, building REST controllers, wiring
+          Hibernate, and consuming the APIs from React front-ends. Alongside, I
+          built a Core Java banking application to sharpen OOP, collections and
+          file-handling fundamentals.
+        </p>
+        <p>
+          I'm looking for a <strong>Java Developer / Full Stack</strong> role on a
+          team where I can ship real features and grow alongside senior engineers.
+        </p>
+
+        <div class="mini-roles">
+          <span class="mini-roles-label">Also known as</span>
+          <span class="mini-role">Problem Solver</span>
+          <span class="mini-role">API Builder</span>
+          <span class="mini-role">Fresher · Fast Learner</span>
+        </div>
+      </div>
+
+      <dl class="about-facts" data-reveal>
+        <div>
+          <dt>Based in</dt>
+          <dd>Hyderabad, Telangana</dd>
+        </div>
+        <div>
+          <dt>Focus</dt>
+          <dd>Java · Spring Boot · React</dd>
+        </div>
+        <div>
+          <dt>Education</dt>
+          <dd>B.Tech CSE, 2026</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd><span class="dot"></span> Open to work</dd>
+        </div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WORK ================= -->
+<section id="work" class="section section--work">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <span class="section-num">02 — Selected work</span>
+      <h2 class="section-title">Things I've designed &amp; shipped.</h2>
+    </div>
+
+    <div class="work-list">
+
+      <article class="work-item" data-reveal>
+        <a href="https://github.com/rakesh597597/ecommerce-backend" target="_blank" rel="noopener noreferrer" class="work-card" data-cursor="Open">
+          <div class="work-meta">
+            <span class="work-num">01</span>
+            <span class="work-year">2025</span>
+          </div>
+
+          <div class="work-body">
+            <h3>E-Commerce Backend</h3>
+            <p class="work-role">Backend API · Database Design</p>
+            <p class="work-desc">
+              A production-minded backend for e-commerce applications — REST APIs
+              for product management, user authentication, cart operations and
+              order processing.
+            </p>
+
+            <ul class="work-points">
+              <li>Designed the MySQL schema and mapped entities with Hibernate ORM for efficient persistence.</li>
+              <li>Built RESTful endpoints with Spring Boot for clean frontend and third-party integration.</li>
+              <li>Modularised product, user, cart and order services as independent resources.</li>
+            </ul>
+
+            <ul class="work-tags">
+              <li>Java</li><li>Spring Boot</li><li>Hibernate</li><li>MySQL</li><li>REST</li>
+            </ul>
+          </div>
+
+          <div class="work-arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="7" y1="17" x2="17" y2="7"/>
+              <polyline points="7 7 17 7 17 17"/>
+            </svg>
+          </div>
+        </a>
+      </article>
+
+      <article class="work-item" data-reveal>
+        <a href="https://github.com/rakesh597597/Bank-Management-System" target="_blank" rel="noopener noreferrer" class="work-card" data-cursor="Open">
+          <div class="work-meta">
+            <span class="work-num">02</span>
+            <span class="work-year">Mar 2025</span>
+          </div>
+
+          <div class="work-body">
+            <h3>Bank Management System</h3>
+            <p class="work-role">Core Java · Console Application</p>
+            <p class="work-desc">
+              A console-based banking application that models customers, accounts
+              and transactions in pure Core Java — a study in clean OOP.
+            </p>
+
+            <ul class="work-points">
+              <li>Used Collections (ArrayList, HashSet) for fast in-memory search and validation.</li>
+              <li>Applied inheritance &amp; polymorphism for Savings and Current account types with per-type rules.</li>
+              <li>Persisted account records between runs using Java file handling.</li>
+            </ul>
+
+            <ul class="work-tags">
+              <li>Core Java</li><li>OOP</li><li>Collections</li><li>File I/O</li>
+            </ul>
+          </div>
+
+          <div class="work-arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="7" y1="17" x2="17" y2="7"/>
+              <polyline points="7 7 17 7 17 17"/>
+            </svg>
+          </div>
+        </a>
+      </article>
+
+      <article class="work-item" data-reveal>
+        <a href="https://github.com/rakesh597597/portfolio" target="_blank" rel="noopener noreferrer" class="work-card" data-cursor="Open">
+          <div class="work-meta">
+            <span class="work-num">03</span>
+            <span class="work-year">2025</span>
+          </div>
+
+          <div class="work-body">
+            <h3>Portfolio Website</h3>
+            <p class="work-role">Frontend · Design System</p>
+            <p class="work-desc">
+              The page you're reading. A dependency-free personal site built to
+              showcase projects with an editorial layout and a small design system.
+            </p>
+
+            <ul class="work-points">
+              <li>Semantic HTML, modern CSS (grid, custom props, layers) and vanilla JS.</li>
+              <li>Responsive by default — tested from 320px to 4K.</li>
+              <li>Motion respects <code>prefers-reduced-motion</code>.</li>
+            </ul>
+
+            <ul class="work-tags">
+              <li>HTML</li><li>CSS</li><li>JavaScript</li>
+            </ul>
+          </div>
+
+          <div class="work-arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="7" y1="17" x2="17" y2="7"/>
+              <polyline points="7 7 17 7 17 17"/>
+            </svg>
+          </div>
+        </a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= STACK ================= -->
+<section id="stack" class="section section--stack">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <span class="section-num">03 — Stack</span>
+      <h2 class="section-title">Tools I reach for.</h2>
+      <p class="section-sub">Watch a different discipline light up every few seconds.</p>
+    </div>
+
+    <div class="bento">
+
+      <div class="bento-card bento--lg" data-rotate-skill data-tilt>
+        <div class="bento-glow" aria-hidden="true"></div>
+        <div class="bento-head">
+          <span class="bento-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 17V7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10"/>
+              <path d="M2 17h20"/>
+              <path d="M6 12h4"/>
+              <path d="M14 12h4"/>
+            </svg>
+          </span>
+          <h3>Backend</h3>
+          <p>The side of the stack I care most about.</p>
+        </div>
+        <ul class="bento-list">
+          <li><span>Spring Boot</span><em>REST APIs, layered services</em></li>
+          <li><span>Spring MVC</span><em>Controller / Service / Repo</em></li>
+          <li><span>Hibernate / JPA</span><em>Entity mapping, ORM</em></li>
+          <li><span>Java</span><em>OOP, Collections, Streams</em></li>
+        </ul>
+      </div>
+
+      <div class="bento-card" data-rotate-skill data-tilt>
+        <div class="bento-glow" aria-hidden="true"></div>
+        <div class="bento-head">
+          <span class="bento-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="16 18 22 12 16 6"/>
+              <polyline points="8 6 2 12 8 18"/>
+            </svg>
+          </span>
+          <h3>Frontend</h3>
+          <p>Interfaces that talk to the API.</p>
+        </div>
+        <ul class="chips">
+          <li>React JS</li><li>JavaScript</li><li>HTML5</li><li>CSS3</li>
+        </ul>
+      </div>
+
+      <div class="bento-card" data-rotate-skill data-tilt>
+        <div class="bento-glow" aria-hidden="true"></div>
+        <div class="bento-head">
+          <span class="bento-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <ellipse cx="12" cy="5" rx="9" ry="3"/>
+              <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+              <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+            </svg>
+          </span>
+          <h3>Data</h3>
+          <p>Where the records live.</p>
+        </div>
+        <ul class="chips">
+          <li>MySQL</li><li>SQL</li><li>Hibernate ORM</li>
+        </ul>
+      </div>
+
+      <div class="bento-card" data-rotate-skill data-tilt>
+        <div class="bento-glow" aria-hidden="true"></div>
+        <div class="bento-head">
+          <span class="bento-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+            </svg>
+          </span>
+          <h3>Tools</h3>
+          <p>The daily drivers.</p>
+        </div>
+        <ul class="chips">
+          <li>Git</li><li>GitHub</li><li>VS Code</li><li>IntelliJ</li><li>Eclipse</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= JOURNEY ================= -->
+<section id="journey" class="section section--journey">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <span class="section-num">04 — Journey</span>
+      <h2 class="section-title">Experience &amp; education.</h2>
+    </div>
+
+    <div class="journey">
+
+      <div class="journey-item" data-reveal>
+        <div class="journey-when">
+          <span class="journey-dot"></span>
+          <span>Jun 2026 — Present</span>
+        </div>
+        <div class="journey-body">
+          <span class="journey-tag">Training</span>
+          <h3>Java Full Stack Trainee</h3>
+          <p class="journey-org">Codegnan IT Solutions · Hyderabad</p>
+          <ul class="journey-list">
+            <li>Hands-on training in Core Java and Advanced Java, plus full-stack web development (Spring Boot, Spring MVC, MySQL, HTML/CSS/JS).</li>
+            <li>Building real projects alongside the curriculum — applying OOP, database design and API layering in practice.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="journey-item" data-reveal>
+        <div class="journey-when">
+          <span class="journey-dot"></span>
+          <span>Nov 2022 — 2026</span>
+        </div>
+        <div class="journey-body">
+          <span class="journey-tag">Education</span>
+          <h3>B.Tech, Computer Science &amp; Engineering</h3>
+          <p class="journey-org">Balaji Institute of Technology and Science · Warangal</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="section section--contact section--last">
+  <div class="container">
+    <div class="contact">
+
+      <div class="contact-copy" data-reveal>
+        <span class="section-num">05 — Contact</span>
+        <h2 class="contact-title">
+          Let's build<br />
+          something <em>worth</em> shipping.
+        </h2>
+        <p class="contact-lede">
+          Actively looking for Java Developer / Full Stack roles. If you have an
+          opening, or just want to talk shop — my inbox is open.
+        </p>
+
+        <div class="contact-actions">
+          <a href="mailto:mamindlarakesh124@gmail.com" class="btn btn-primary btn-lg" data-magnetic data-cursor="Mail">
+            mamindlarakesh124@gmail.com
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </a>
+          <a href="Rakesh_Mamindla_Java_Resume.pdf" class="btn btn-ghost btn-lg" download data-magnetic>
+            Download Resume
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-side" data-reveal>
+        <dl class="contact-facts">
+          <div>
+            <dt>Email</dt>
+            <dd><a href="mailto:mamindlarakesh124@gmail.com">mamindlarakesh124@gmail.com</a></dd>
+          </div>
+          <div>
+            <dt>Phone</dt>
+            <dd><a href="tel:+919346584513">+91 93465 84513</a></dd>
+          </div>
+          <div>
+            <dt>Location</dt>
+            <dd>Hyderabad, Telangana</dd>
+          </div>
+          <div>
+            <dt>GitHub</dt>
+            <dd><a href="https://github.com/rakesh597597" target="_blank" rel="noopener noreferrer">rakesh597597</a></dd>
+          </div>
+          <div>
+            <dt>LinkedIn</dt>
+            <dd><a href="https://www.linkedin.com/in/mamindla-rakesh-206356303/" target="_blank" rel="noopener noreferrer">mamindla-rakesh</a></dd>
+          </div>
+          <div>
+            <dt>Resume</dt>
+            <dd><a href="Rakesh_Mamindla_Java_Resume.pdf" download>Download PDF ↓</a></dd>
+          </div>
+        </dl>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="footer-glow" aria-hidden="true"></div>
+  <div class="container footer-inner">
+    <span class="footer-brand">
+      <span class="brand-mark">R</span>
+      rakesh<em>.dev</em>
+    </span>
+    <span class="footer-copy">© <span id="year"></span> · Designed &amp; built by Rakesh Mamindla</span>
+    <a href="#top" class="footer-top" data-magnetic>Back to top ↑</a>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  /* =========================================================
+     1. Custom cursor
+     ========================================================= */
+  var isTouch = window.matchMedia('(hover: none), (pointer: coarse)').matches;
+  var cursorDot  = document.getElementById('cursorDot');
+  var cursorRing = document.getElementById('cursorRing');
+
+  if (!isTouch && cursorDot && cursorRing) {
+    document.body.classList.add('has-cursor');
+
+    var mX = window.innerWidth/2, mY = window.innerHeight/2;
+    var dX = mX, dY = mY;
+    var rX = mX, rY = mY;
+
+    document.addEventListener('mousemove', function (e) {
+      mX = e.clientX;
+      mY = e.clientY;
+    });
+
+    (function loop() {
+      dX += (mX - dX) * 0.55;
+      dY += (mY - dY) * 0.55;
+      rX += (mX - rX) * 0.14;
+      rY += (mY - rY) * 0.14;
+
+      cursorDot.style.transform  = 'translate3d(' + dX + 'px,' + dY + 'px,0)';
+      cursorRing.style.transform = 'translate3d(' + rX + 'px,' + rY + 'px,0)';
+
+      requestAnimationFrame(loop);
+    })();
+
+    /* Hover state — expands ring on interactive elements */
+    var hoverables = 'a, button, [data-magnetic], [data-cursor], input, textarea, [role="button"]';
+    document.querySelectorAll(hoverables).forEach(function (el) {
+      el.addEventListener('mouseenter', function () {
+        cursorRing.classList.add('is-hover');
+        var label = el.getAttribute('data-cursor');
+        if (label) {
+          cursorRing.classList.add('is-label');
+          cursorRing.setAttribute('data-label', label);
+        }
+      });
+      el.addEventListener('mouseleave', function () {
+        cursorRing.classList.remove('is-hover');
+        cursorRing.classList.remove('is-label');
+        cursorRing.removeAttribute('data-label');
+      });
+    });
+
+    /* Click state */
+    document.addEventListener('mousedown', function(){ cursorRing.classList.add('is-down'); });
+    document.addEventListener('mouseup',   function(){ cursorRing.classList.remove('is-down'); });
+  }
+
+  /* =========================================================
+     2. Sparkle burst on click
+     ========================================================= */
+  if (!isTouch) {
+    document.addEventListener('click', function (e) {
+      var burst = 6;
+      for (var i = 0; i < burst; i++) {
+        (function (i) {
+          var s = document.createElement('span');
+          s.className = 'sparkle';
+          s.style.left = e.clientX + 'px';
+          s.style.top  = e.clientY + 'px';
+          var angle = (Math.PI * 2 * i) / burst + Math.random() * 0.6;
+          var dist  = 40 + Math.random() * 40;
+          s.style.setProperty('--sx', Math.cos(angle) * dist + 'px');
+          s.style.setProperty('--sy', Math.sin(angle) * dist + 'px');
+          document.body.appendChild(s);
+          setTimeout(function(){ s.remove(); }, 720);
+        })(i);
+      }
+    });
+  }
+
+  /* =========================================================
+     3. Scroll progress bar
+     ========================================================= */
+  var progress = document.getElementById('scrollProgress');
+  function updateProgress() {
+    var h = document.documentElement;
+    var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
+    if (progress) progress.style.transform = 'scaleX(' + scrolled + ')';
+  }
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  updateProgress();
+
+  /* =========================================================
+     4. Navbar scrolled state
+     ========================================================= */
+  var nav = document.getElementById('nav');
+  function onScroll() {
+    nav.classList.toggle('scrolled', window.scrollY > 8);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  /* =========================================================
+     5. Mobile nav
+     ========================================================= */
+  var toggle = document.getElementById('navToggle');
+  var links  = document.getElementById('navLinks');
+  function closeNav() {
+    links.classList.remove('open');
+    toggle.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+  }
+  toggle.addEventListener('click', function () {
+    var open = links.classList.toggle('open');
+    toggle.classList.toggle('open', open);
+    toggle.setAttribute('aria-expanded', String(open));
+  });
+  links.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', closeNav); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeNav(); });
+  window.addEventListener('resize', function () { if (window.innerWidth > 900) closeNav(); });
+
+  /* =========================================================
+     6. Scroll spy + nav indicator
+     ========================================================= */
+  var sections = document.querySelectorAll('main section[id]');
+  var map = {};
+  var indicator = document.getElementById('navIndicator');
+
+  links.querySelectorAll('a[href^="#"]').forEach(function (a) {
+    map[a.getAttribute('href').slice(1)] = a;
+  });
+
+  function moveIndicator(el) {
+    if (!indicator || !el) { indicator.style.opacity = 0; return; }
+    var linkRect = el.getBoundingClientRect();
+    var navRect  = links.getBoundingClientRect();
+    indicator.style.opacity = 1;
+    indicator.style.transform = 'translateX(' + (linkRect.left - navRect.left) + 'px)';
+    indicator.style.width = linkRect.width + 'px';
+  }
+
+  if ('IntersectionObserver' in window) {
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        var id = entry.target.id;
+        Object.keys(map).forEach(function (k) {
+          map[k].classList.toggle('active', k === id);
+        });
+        moveIndicator(map[id]);
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    sections.forEach(function (s) { spy.observe(s); });
+  }
+
+  /* =========================================================
+     7. Scroll reveal
+     ========================================================= */
+  var revealEls = document.querySelectorAll('[data-reveal]');
+  if ('IntersectionObserver' in window) {
+    var ro = new IntersectionObserver(function (entries, obs) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('is-visible');
+        obs.unobserve(entry.target);
+      });
+    }, { rootMargin: '0px 0px -80px 0px', threshold: 0.06 });
+    revealEls.forEach(function (el, i) {
+      el.style.transitionDelay = Math.min(i % 5, 4) * 70 + 'ms';
+      ro.observe(el);
+    });
+  } else {
+    revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+  }
+
+  /* =========================================================
+     8. Rotating hero identity
+     ========================================================= */
+  var rotator = document.getElementById('rotator');
+  if (rotator) {
+    var words = rotator.querySelectorAll('.rotator-word');
+    var idx = 0;
+    setInterval(function () {
+      words[idx].classList.remove('is-active');
+      idx = (idx + 1) % words.length;
+      words[idx].classList.add('is-active');
+    }, 2600);
+  }
+
+  /* =========================================================
+     9. Rotating featured skill
+     ========================================================= */
+  var skillCards = document.querySelectorAll('[data-rotate-skill]');
+  if (skillCards.length) {
+    var sidx = 0;
+    skillCards[sidx].classList.add('is-featured');
+    setInterval(function () {
+      skillCards[sidx].classList.remove('is-featured');
+      sidx = (sidx + 1) % skillCards.length;
+      skillCards[sidx].classList.add('is-featured');
+    }, 2800);
+  }
+
+  /* =========================================================
+     10. 3D tilt
+     ========================================================= */
+  if (!isTouch) {
+    document.querySelectorAll('[data-tilt]').forEach(function (el) {
+      el.addEventListener('mousemove', function (e) {
+        var rect = el.getBoundingClientRect();
+        var x = (e.clientX - rect.left) / rect.width - 0.5;
+        var y = (e.clientY - rect.top) / rect.height - 0.5;
+        el.style.transform =
+          'perspective(1000px) rotateY(' + (x * 7) + 'deg) rotateX(' + (-y * 7) + 'deg) translateZ(0)';
+      });
+      el.addEventListener('mouseleave', function () {
+        el.style.transform = '';
+      });
+    });
+  }
+
+  /* =========================================================
+     11. Magnetic buttons
+     ========================================================= */
+  if (!isTouch) {
+    document.querySelectorAll('[data-magnetic]').forEach(function (el) {
+      el.addEventListener('mousemove', function (e) {
+        var rect = el.getBoundingClientRect();
+        var x = e.clientX - rect.left - rect.width / 2;
+        var y = e.clientY - rect.top  - rect.height / 2;
+        el.style.transform = 'translate(' + (x * 0.18) + 'px,' + (y * 0.18) + 'px)';
+      });
+      el.addEventListener('mouseleave', function () {
+        el.style.transform = '';
+      });
+    });
+  }
+
+  /* =========================================================
+     12. Footer year
+     ========================================================= */
+  var y = document.getElementById('year');
+  if (y) y.textContent = new Date().getFullYear();
+
+})();
+</script>
+</body>
+</html>
